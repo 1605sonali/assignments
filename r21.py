@@ -22,16 +22,16 @@ for i in range(len(g)):
 while len(c) > 0:
 
          u = c.pop()
+         print(u)
          d.append(u)
 
          for i in range(len(b)):
-           for j in range(len(g[i])):
-                k=''.join(g[i][j])
-                if u == k:
-                  b[i]=b[i]-1
-                  if b[i]==0:
-                     c.append(a[i])
+             f=set(g[i])
 
+             if u in f :
+                b[i]=b[i]-1
+                if b[i]==0:
+                   c.append(a[i])
 print(d)
 
 
